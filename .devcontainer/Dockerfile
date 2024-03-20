@@ -9,7 +9,7 @@
 
 
 ### From Rust official docker
-# FROM debian:buster-slim
+# FROM debian:buster
 
 # ENV RUSTUP_HOME=/usr/local/rustup \
 #     CARGO_HOME=/usr/local/cargo \
@@ -49,14 +49,7 @@
 
 
 ### Also from official Rust
-# FROM rust:latest
-
-
-### Both 
 FROM rust:latest
-# RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# RUN echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bash_profile
-# RUN source ~/.bash_profile
-# RUN brew tap cargo-lambda/cargo-lambda
-# RUN brew install cargo-lambda
 
+RUN rustup component add rustfmt
+RUN rustup component add clippy

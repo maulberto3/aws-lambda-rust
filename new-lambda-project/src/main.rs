@@ -1,13 +1,12 @@
 use lambda_http::{run, service_fn, tracing, Body, Error, Request, RequestExt, Response};
 
-// for a newly created cargo lambda project 
+// for a newly created cargo lambda project
 // one terminal
 // cargo lambda watch
 // then on second terminal
 // curl http://localhost:9000/?name=John
 // should output
 // "Hello John, this is an AWS Lambda HTTP request"
-
 
 /// This is the main body for the function.
 /// Write your code inside it.
